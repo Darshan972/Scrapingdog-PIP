@@ -1,5 +1,5 @@
 # Scrapingdog Python Library & Package
-[![Package](https://img.shields.io/pypi/v/scrapingdog?color=green)](https://pypi.org/project/scrapingdog) [![Python](https://img.shields.io/pypi/pyversions/scrapingdog)](https://pypi.org/project/scrapingdog)
+[![Package](https://img.shields.io/pypi/v/scrapingdog?color=green)](https://pypi.org/project/scrapingdog) [![CI](https://github.com/Darshan972/Scrapingdog-PIP/actions/workflows/ci.yml/badge.svg)](https://github.com/Darshan972/Scrapingdog-PIP/actions/workflows/ci.yml) [![Python](https://img.shields.io/pypi/pyversions/scrapingdog)](https://pypi.org/project/scrapingdog)
 
 Integrate web scraping and search data into your AI workflow, RAG / fine-tuning, or Python application using this official-style wrapper for [Scrapingdog](https://www.scrapingdog.com).
 
@@ -14,6 +14,8 @@ To install the `scrapingdog` package, simply run the following command:
 ```bash
 $ pip install scrapingdog
 ```
+
+Requires Python 3.8+ and depends only on `requests`.
 
 ## Simple Usage
 
@@ -323,3 +325,22 @@ MIT License.
 ## Contributing
 
 Bug reports and pull requests are welcome. Once dependencies are installed (`pip install -e ".[test]"`), you can run the tests with `pytest`.
+
+## Publishing a new release
+
+Releases are published to PyPI automatically via GitHub Actions using
+[Trusted Publishing](https://docs.pypi.org/trusted-publishers/) (no API token
+required).
+
+1. Bump the version in `pyproject.toml` and `scrapingdog/__init__.py`.
+2. Push a version tag — the [release workflow](.github/workflows/release.yml)
+   tests, builds, and publishes to PyPI:
+   ```bash
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+
+**One-time PyPI setup** (before the first release): on
+[pypi.org/manage/account/publishing](https://pypi.org/manage/account/publishing/),
+add a *pending publisher* with — Project: `scrapingdog`, Owner: `Darshan972`,
+Repository: `Scrapingdog-PIP`, Workflow: `release.yml`, Environment: `pypi`.
