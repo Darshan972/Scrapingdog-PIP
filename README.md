@@ -3,7 +3,7 @@
 
 Integrate web scraping and search data into your AI workflow, RAG / fine-tuning, or Python application using this official-style wrapper for [Scrapingdog](https://www.scrapingdog.com).
 
-Scrapingdog supports general web scraping (rotating & residential proxies, JavaScript rendering), Google, Google Maps, Google Shopping, Bing, Baidu, DuckDuckGo, Amazon, Walmart, eBay, App Stores, LinkedIn, and [more](https://www.scrapingdog.com/documentation/).
+Scrapingdog supports general web scraping (rotating & residential proxies, JavaScript rendering), Google, Google Maps, Google Shopping, Bing, Baidu, DuckDuckGo, Amazon, Walmart, eBay, App Stores, and [more](https://www.scrapingdog.com/documentation/).
 
 Query a vast range of data at scale, including web pages, search results, product listings, flight and hotel data, job postings, social profiles, and [more](https://www.scrapingdog.com/documentation/).
 
@@ -249,13 +249,13 @@ results = client.apple_app_store(term="whatsapp", country="us", lang="en-us")
 ```
 - API Documentation: [scrapingdog.com/apple-app-store-api](https://www.scrapingdog.com/documentation/apple-app-store-api/)
 
-### LinkedIn Profile
+### Profile
 ```python
 import os
 import scrapingdog
 
 client = scrapingdog.Client(api_key=os.getenv("SCRAPINGDOG_API_KEY"))
-results = client.linkedin("rbranson", type="profile")
+results = client.profile("rbranson", type="profile")
 ```
 - API Documentation: [scrapingdog.com/profile-scraper-api](https://www.scrapingdog.com/documentation/profile-scraper-api/)
 
@@ -312,7 +312,7 @@ account = client.account()  # remaining credits & plan usage
 
 **Retail:** `walmart_search`, `walmart_product`, `walmart_reviews`, `walmart_autocomplete`, `ebay_search`, `ebay_product`, `flipkart_search`, `flipkart_product`, `myntra_search`, `myntra_product`, `zillow`
 
-**Social & professional:** `linkedin`, `linkedin_post`, `linkedin_jobs`, `indeed`, `x_profile`, `x_post`, `tiktok_profile`, `tiktok_post`, `tiktok_ads`, `facebook`, `instagram`, `youtube`
+**Social & professional:** `profile`, `profile_post`, `jobs`, `indeed`, `x_profile`, `x_post`, `tiktok_profile`, `tiktok_post`, `tiktok_ads`, `facebook`, `instagram`, `youtube`
 
 **AI:** `chatgpt`
 

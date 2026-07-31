@@ -440,21 +440,21 @@ class Client:
     # Social media & professional
     # =========================================================================
 
-    def linkedin(self, id, *, type="profile", **params):  # noqa: A002
-        """LinkedIn profile/company scraper (``/profile``).
+    def profile(self, id, *, type="profile", **params):  # noqa: A002
+        """Profile scraper API (``/profile``).
 
         Args:
-            id: The public LinkedIn identifier (person or company).
+            id: The public profile identifier (person or company).
             type: ``"profile"`` (person) or ``"company"``.
         """
         return self.get("profile", id=id, type=type, **params)
 
-    def linkedin_post(self, id, **params):  # noqa: A002
-        """LinkedIn post scraper (``/profile/post``)."""
+    def profile_post(self, id, **params):  # noqa: A002
+        """Profile post scraper API (``/profile/post``)."""
         return self.get("profile/post", id=id, **params)
 
-    def linkedin_jobs(self, *, field=None, geoid=None, page=None, **params):
-        """LinkedIn Jobs search API (``/jobs``)."""
+    def jobs(self, *, field=None, geoid=None, page=None, **params):
+        """Jobs search API (``/jobs``)."""
         return self.get("jobs", field=field, geoid=geoid, page=page, **params)
 
     def indeed(self, url, **params):

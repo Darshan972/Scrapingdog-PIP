@@ -79,9 +79,9 @@ def test_amazon_product_endpoint_and_defaults():
 
 
 @responses.activate
-def test_linkedin_uses_profile_endpoint():
+def test_profile_endpoint():
     responses.add(responses.GET, f"{BASE}/profile", json={}, status=200)
-    make_client().linkedin("rbranson", type="profile")
+    make_client().profile("rbranson", type="profile")
     url = responses.calls[0].request.url
     assert "/profile?" in url
     assert "id=rbranson" in url

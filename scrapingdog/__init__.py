@@ -21,7 +21,7 @@ from .models import ScrapingdogResults
 
 # Single source of truth for the package version; pyproject.toml reads this
 # via [tool.setuptools.dynamic]. Bump here for each release.
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 __all__ = [
     "Client",
