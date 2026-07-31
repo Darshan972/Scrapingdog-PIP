@@ -332,7 +332,8 @@ Releases are published to PyPI automatically via GitHub Actions using
 [Trusted Publishing](https://docs.pypi.org/trusted-publishers/) (no API token
 required).
 
-1. Bump the version in `pyproject.toml` and `scrapingdog/__init__.py`.
+1. Bump `__version__` in [`scrapingdog/__init__.py`](scrapingdog/__init__.py)
+   (the single source of truth — `pyproject.toml` reads it dynamically).
 2. Push a version tag — the [release workflow](.github/workflows/release.yml)
    tests, builds, and publishes to PyPI:
    ```bash
