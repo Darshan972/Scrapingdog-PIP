@@ -39,7 +39,7 @@ Scraping an arbitrary web page returns the raw HTML instead:
 html = client.scrape("https://example.com", dynamic=True, premium=False)
 ```
 
-The Scrapingdog API key can be obtained from [scrapingdog.com/signup](https://www.scrapingdog.com/users/register/).
+The Scrapingdog API key can be obtained from [api.scrapingdog.com/register](https://api.scrapingdog.com/register).
 
 Environment variables are a secure, safe, and easy way to manage secrets.
  Set `export SCRAPINGDOG_API_KEY=<secret_api_key>` in your shell.
